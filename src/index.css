@@ -1,3 +1,6 @@
+
+/* imported custom google fonts */
+
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
@@ -5,3 +8,96 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer components{
+    /* here, ct = custom */
+
+    .ct-container{
+        @apply xl:max-w-[1200px] lg:max-w-[1024px] md:max-w-[768px] sm:max-w-[425px] xs:max-w-[375px] mx-auto p-1;
+    }
+
+    .ct-flex-center{
+        @apply flex items-center justify-center;
+    }
+
+    .ct-flex-between{
+        @apply flex items-center justify-between;
+    }
+
+    .ct-flex-start{
+        @apply flex items-center justify-start;
+    }
+
+    .ct-flex-end{
+        @apply flex items-center justify-end;
+    }
+
+    .ct-flex-around{
+        @apply flex items-center justify-around;
+    }
+
+    .ct-flex-evenly{
+        @apply flex items-center justify-evenly;
+    }
+
+    .ct-flex-start{
+        @apply flex justify-start items-start;
+    }
+
+    .ct-grid-cols-2{
+        @apply grid grid-cols-2 gap-4;
+    }
+
+    .ct-grid-cols-3{
+        @apply grid grid-cols-3 gap-3;
+    }
+
+    .ct-grid-cols-4{
+        @apply grid grid-cols-4 gap-3;
+    }
+
+    .ct-grid-cols-5{
+        @apply grid grid-cols-5 gap-5;
+    }
+    
+    .ct-grid-cols3-span2{
+        @apply grid grid-cols-3;
+    }
+
+    .ct-zoom-in-hover{
+       @apply hover:scale-110 transition-transform duration-500 cursor-pointer;
+    }
+
+    .ct-zoom-out-hover{
+       @apply hover:scale-100 transition-transform duration-500 cursor-pointer;
+    }
+
+    .smooth-hover-animation{
+        @apply transition-all duration-500 ease-in-out;
+    }
+
+    .medium-hover-animation{
+        @apply transition-all duration-300 ease-in-out;
+    }
+}
+
+
+@layer utilities{
+    .nav-list{
+        @apply relative 
+    }
+
+    .nav-list::after{
+        @apply content-[''] absolute w-[150%] left-[-11px] bottom-[-12px] h-[2px] bg-transparent transition duration-300 ease-in-out
+    }
+
+    .nav-list:hover::after{
+        @apply bg-buttonBg
+    }
+
+}
+
+
+
